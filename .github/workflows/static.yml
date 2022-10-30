@@ -1,0 +1,11 @@
+name: workflow 101
+on: workflow_dispatch
+jobs:
+  my_first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: start
+        run: echo "hellow world"
+      - name: end
+        run: "$ENVIRONMENT"
+      
