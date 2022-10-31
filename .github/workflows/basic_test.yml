@@ -14,4 +14,11 @@ jobs:
         run: npm ci
       - name: run test
         run: npm test
+  deploy-to-server:
+    runs-on: windows-latest
+    needs: unit-testing
+    steps:
+      - name: deploying
+      type: echo "deployed"
+    
 
