@@ -3,7 +3,6 @@ on: push
 jobs:
   deploy-to-server:
     runs-on: windows-latest
-    needs: unit-testing
     steps:
       - name: deploying
         run: echo "deployed"
