@@ -19,6 +19,6 @@ jobs:
     needs: unit-testing
     steps:
       - name: deploying
-      type: echo "deployed"
+        run: echo "deployed"
     
 
