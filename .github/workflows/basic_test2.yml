@@ -6,5 +6,11 @@ jobs:
     steps:
       - name: deploying
         run: echo "deployed"
+      - name: download artifact
+        uses: actions/download-artifact@v3
+        with: 
+          name: my-artifacts
+      - name: list files
+        run: ls -l
     
 
