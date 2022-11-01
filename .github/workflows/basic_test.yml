@@ -1,5 +1,5 @@
 name: basic unit testing1
-on: push
+on: workflow_dispatch
 jobs:
   unit-testing:
     runs-on: ubuntu-latest
