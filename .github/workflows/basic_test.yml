@@ -1,0 +1,19 @@
+name: basic unit testing1
+on: push
+jobs:
+  unit-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: copy code
+        uses: actions/checkout@v3
+      - name: install node
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 18
+      - name: install packages
+        run: npm ci
+      - name: run test
+        run: npm test
+
+    
+
