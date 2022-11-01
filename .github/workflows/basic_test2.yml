@@ -3,10 +3,12 @@ on: workflow_dispatch
 jobs:
   deploy-to-server:
     runs-on: ubuntu-latest
+    env:
+      full-name: hi
     steps:
-      - name: ubuntu user
-        run: echo "user is $GITHUB_ACTOR"
-      - name: windows user
-        run: echo "user is $env:GITHUB_ACTOR"
+      - name: action secret
+        run: echo "user is ${{secrets.MY_ACTION_SECRET}}"
+      - name: environment secret
+        run: echo "user is $full-name"
     
 
