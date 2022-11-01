@@ -4,13 +4,9 @@ jobs:
   deploy-to-server:
     runs-on: ubuntu-latest
     steps:
-      - name: deploying
-        run: echo "deployed"
-      - name: download artifact
-        uses: actions/download-artifact@v3
-        with: 
-          name: my-artifacts
-      - name: list files
-        run: ls -l
+      - name: ubuntu user
+        run: echo "user is $GITHUB_ACTOR"
+      - name: windows user
+        run: echo "user is $env:GITHUB_ACTOR"
     
 
