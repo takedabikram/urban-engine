@@ -2,7 +2,7 @@ name: basic unit testing2
 on: workflow_dispatch
 jobs:
   deploy-to-server:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: deploying
         run: echo "deployed"
