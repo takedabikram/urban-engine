@@ -14,6 +14,13 @@ jobs:
         run: npm ci
       - name: run test
         run: npm test
+      - name: upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifacts
+          path: |
+            index.html
+            utils.js 
 
     
 
