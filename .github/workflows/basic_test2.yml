@@ -2,6 +2,7 @@ name: basic unit testing2
 on: workflow_dispatch
 jobs:
   deploy-to-server:
+    environment: test
     runs-on: ubuntu-latest
     env:
       fullname: hi
@@ -10,5 +11,7 @@ jobs:
         run: echo "user is ${{secrets.MY_ACTION_SECRET}}"
       - name: environment secret
         run: echo "user is $fullname"
+      - name: env specific
+        run: echo "value is ${{secrets.MY_ACTION_SECRET1}}"
     
 
