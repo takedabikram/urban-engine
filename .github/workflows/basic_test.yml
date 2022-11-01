@@ -23,6 +23,7 @@ jobs:
             utils.js 
   process-data:
     runs-on: ubuntu-latest
+    needs: unit-testing
     steps:
       - name: download artifact
         uses: actions/download-artifact@v3
