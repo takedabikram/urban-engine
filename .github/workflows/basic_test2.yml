@@ -4,11 +4,11 @@ jobs:
   deploy-to-server:
     runs-on: ubuntu-latest
     env:
-      full-name: hi
+      fullname: hi
     steps:
       - name: action secret
         run: echo "user is ${{secrets.MY_ACTION_SECRET}}"
       - name: environment secret
-        run: echo "user is $full-name"
+        run: echo "user is $fullname"
     
 
