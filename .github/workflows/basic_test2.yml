@@ -16,6 +16,7 @@ jobs:
       - name: env specific
         run: echo "value is ${{secrets.MY_ACTION_SECRET1}}"
   reuse-job:
+    needs: deploy-to-server
     uses: ./.github/workflows/reusable.yaml
     
 
