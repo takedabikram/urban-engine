@@ -1,0 +1,9 @@
+name: my reuable workflow
+on: workflow_call
+jobs:
+  print github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print gihub object
+        run: echo "${{toJSON(github)}}"
+        
