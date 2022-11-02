@@ -11,7 +11,7 @@ jobs:
         if: ${{ env.fullname == 'hi' }}
         run: echo "user is ${{secrets.MY_ACTION_SECRET}}"
       - name: environment secret
-#         if: ${{ secrets.MY_ACTION_SECRET != 'hi' }}
+        if: ${{ env.fullname != 'hi' }}
         run: echo "user is $fullname"
       - name: env specific
         run: echo "value is ${{secrets.MY_ACTION_SECRET1}}"
