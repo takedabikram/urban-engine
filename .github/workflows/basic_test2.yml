@@ -7,11 +7,15 @@ jobs:
     env:
       fullname: hi
     steps:
-      - name: action secret
+      - name: action secret 
+        if: $fullname == 'hi'
         run: echo "user is ${{secrets.MY_ACTION_SECRET}}"
       - name: environment secret
+        if: $fullname != 'hi'
         run: echo "user is $fullname"
       - name: env specific
         run: echo "value is ${{secrets.MY_ACTION_SECRET1}}"
+  reuse-job:
+    uses: ./.github/workflows/reusable.yaml
     
 
